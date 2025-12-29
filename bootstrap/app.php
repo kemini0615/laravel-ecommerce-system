@@ -16,6 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
             // 미들웨어 별칭 덮어쓰기
+            'auth' => App\Http\Middleware\Authenticate::class,
             'guest' => App\Http\Middleware\RedirectIfAuthenticated::class,
         ]);
     })
