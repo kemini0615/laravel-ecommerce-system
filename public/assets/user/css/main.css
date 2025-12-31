@@ -1315,13 +1315,13 @@ label {
   font-weight: bold;
 }
 
-.custome-radio .form-check-label,
-.custome-checkbox .form-check-label {
+.custom-radio .form-check-label,
+.custom-checkbox .form-check-label {
   position: relative;
   cursor: pointer;
 }
 
-.custome-checkbox .form-check-label {
+.custom-checkbox .form-check-label {
   position: relative;
   cursor: pointer;
   color: #687188;
@@ -1329,7 +1329,7 @@ label {
   vertical-align: middle;
 }
 
-.custome-checkbox .form-check-label::before {
+.custom-checkbox .form-check-label::before {
   content: "";
   border: 2px solid #ced4da;
   height: 17px;
@@ -1340,15 +1340,15 @@ label {
   border-radius: 2px;
 }
 
-.custome-checkbox .form-check-label span {
+.custom-checkbox .form-check-label span {
   vertical-align: middle;
 }
 
-.custome-checkbox input[type=checkbox]:checked+.form-check-label::after {
+.custom-checkbox input[type=checkbox]:checked+.form-check-label::after {
   opacity: 1;
 }
 
-.custome-checkbox input[type=checkbox]+.form-check-label::after {
+.custom-checkbox input[type=checkbox]+.form-check-label::after {
   content: "";
   width: 11px;
   position: absolute;
@@ -1361,8 +1361,8 @@ label {
   transform: translateY(-65%) rotate(-45deg);
 }
 
-.custome-radio .form-check-input,
-.custome-checkbox .form-check-input {
+.custom-radio .form-check-input,
+.custom-checkbox .form-check-input {
   display: none;
 }
 
@@ -1375,12 +1375,12 @@ label {
   width: 100%;
 }
 
-.custome-checkbox input[type=checkbox]:checked+.form-check-label::before {
+.custom-checkbox input[type=checkbox]:checked+.form-check-label::before {
   background-color: var(--colorSecondary);
   border-color: var(--colorSecondary);
 }
 
-.custome-checkbox input[type=checkbox]:checked+.form-check-label::after {
+.custom-checkbox input[type=checkbox]:checked+.form-check-label::after {
   opacity: 1;
 }
 
@@ -5154,16 +5154,16 @@ table.no-border thead {
   margin-top: 30px;
 }
 
-.payment_option .custome-radio {
+.payment_option .custom-radio {
   margin-bottom: 10px;
 }
 
-.payment_option .custome-radio .form-check-label {
+.payment_option .custom-radio .form-check-label {
   color: #292b2c;
   font-weight: 600;
 }
 
-.custome-radio .form-check-label::before {
+.custom-radio .form-check-label::before {
   content: "";
   border: 1px solid #959191;
   height: 16px;
@@ -5174,7 +5174,7 @@ table.no-border thead {
   margin-right: 8px;
 }
 
-.custome-radio input[type=radio]+.form-check-label::after {
+.custom-radio input[type=radio]+.form-check-label::after {
   content: "";
   height: 10px;
   width: 10px;
@@ -5185,7 +5185,7 @@ table.no-border thead {
   opacity: 0;
 }
 
-.custome-radio input[type=radio]:checked+.form-check-label::after {
+.custom-radio input[type=radio]:checked+.form-check-label::after {
   opacity: 1;
   background-color: var(--colorSecondary);
 }
@@ -9893,7 +9893,7 @@ footer .hotline img {
 }
 
 /***************************
-    Page section margin 
+    Page section margin
 ****************************/
 .mtb-0 {
   margin: 0;

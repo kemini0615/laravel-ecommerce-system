@@ -19,7 +19,7 @@
                             <div class="login_wrap widget-taber-content background-white">
                                 <div class="padding_eight_all bg-white">
                                     <div class="heading_s1">
-                                        <h1 class="mb-5">Login</h1>
+                                        <h2 class="mb-5">Login</h2>
                                         <p class="mb-30">Don't have an account? <a href="{{ route('register') }}">Create
                                                 here</a>
                                         </p>
@@ -52,7 +52,7 @@
                                         <div class="login_footer form-group mb-50">
                                             <!-- BEGIN REMEMBER ME -->
                                             <div class="chek-form">
-                                                <div class="custome-checkbox">
+                                                <div class="custom-checkbox">
                                                     <input class="form-check-input" type="checkbox" name="remember"
                                                         id="remember_me" />
                                                     <label class="form-check-label" for="remember_me"><span>Remember

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Reset password</title>
+    <title>Reset Password</title>
 
     <!-- BEGIN TABLER CSS -->
     <link href="{{ asset('assets/admin/css/tabler.css') }}" rel="stylesheet" />
@@ -28,10 +28,6 @@
             <div class="card card-md">
                 <div class="card-body">
                     <h2 class="h2 text-center mb-4">Reset your password</h2>
-
-                    <!-- BEGIN SESSION STATUS -->
-                    <x-auth-session-status class="mb-4" :status="session('status')" />
-                    <!-- END SESSION STATUS -->
 
                     <!-- BEGIN FORM -->
                     <form method="POST" action="{{ route('admin.password.store') }}" novalidate>
