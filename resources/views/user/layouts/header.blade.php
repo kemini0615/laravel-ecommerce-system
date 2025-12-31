@@ -1,8 +1,10 @@
-<!-- BEGIN HEADER -->
+<!-- BEGIN DESKTOP HEADER -->
 <header class="header-area header-style-1 header-style-5 header-height-2">
     <div class="mobile-promotion">
         <span>Grand opening, <strong>up to 15%</strong> off all items. Only <strong>3 days</strong> left</span>
     </div>
+
+    <!-- BEGIN HEADER TOP -->
     <div class="header-top header-top-ptb-1 d-none d-lg-block">
         <div class="container">
             <div class="row align-items-center">
@@ -16,6 +18,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-xxl-6 col-xl-5 col-lg-4 d-none d-xl-block">
                     <div class="text-center">
                         <div id="news-flash" class="d-inline-block">
@@ -27,6 +30,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div class="col-xxl-3 col-xl-3 col-lg-5">
                     <div class="header-info header-info-right">
                         <ul>
@@ -37,13 +42,20 @@
             </div>
         </div>
     </div>
+    <!-- END HEADER TOP -->
+
+    <!-- BEGIN HEADER MIDDLE -->
     <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
         <div class="container">
             <div class="header-wrap">
+                <!-- BEGIN HEADER LOGO -->
                 <div class="logo logo-width-1">
-                    <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo" /></a>
+                    <a href="index.html"><img src="{{ asset('assets/user/imgs/theme/logo.jpg') }}" alt="logo" /></a>
                 </div>
+                <!-- END HEADER LOGO -->
+
                 <div class="header-right">
+                    <!-- BEGIN HEADER SEARCH BAR -->
                     <div class="search-style-2">
                         <form action="#">
                             <select class="select-active">
@@ -61,36 +73,49 @@
                             <input type="text" placeholder="Search for items..." />
                         </form>
                     </div>
+                    <!-- END HEADER SEARCH BAR -->
+
+                    <!-- BEGIN HEADER ACTIONS -->
                     <div class="header-action-right">
                         <div class="header-action-2">
+                            <!-- BEGIN COMPARE -->
                             <div class="header-action-icon-2">
                                 <a href="#">
-                                    <img class="svgInject" alt="ShopX"
-                                        src="assets/imgs/theme/icons/icon-compare.svg" />
+                                    <img class="svgInject" alt="Bmazon"
+                                        src="{{ asset('assets/user/imgs/theme/icons/icon-compare.svg') }}" />
                                     <span class="pro-count blue">3</span>
                                 </a>
                                 <a href="#"><span class="lable ml-0">Compare</span></a>
                             </div>
+                            <!-- END COMPARE -->
+
+                            <!-- BEGIN WISHLIST -->
                             <div class="header-action-icon-2">
                                 <a href="#">
-                                    <img class="svgInject" alt="ShopX"
-                                        src="assets/imgs/theme/icons/icon-heart.svg" />
+                                    <img class="svgInject" alt="Bmazon"
+                                        src="{{ asset('assets/user/imgs/theme/icons/icon-heart.svg') }}" />
                                     <span class="pro-count blue">6</span>
                                 </a>
                                 <a href="#"><span class="lable">Wishlist</span></a>
                             </div>
+                            <!-- END WISHLIST -->
+
+                            <!-- BEGIN CART -->
                             <div class="header-action-icon-2">
                                 <a class="mini-cart-icon" href="#">
-                                    <img alt="ShopX" src="assets/imgs/theme/icons/icon-cart.svg" />
+                                    <img alt="Bmazon" src="{{ asset('assets/user/imgs/theme/icons/icon-cart.svg') }}" />
                                     <span class="pro-count blue">2</span>
                                 </a>
+
                                 <a href="#"><span class="lable">Cart</span></a>
+
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2">
                                     <ul>
                                         <li>
                                             <div class="shopping-cart-img">
-                                                <a href="#"><img alt="ShopX"
-                                                        src="assets/imgs/shop/thumbnail-3.jpg" /></a>
+                                                <a href="#">
+                                                    <img alt="Bmazon" src="{{ asset('assets/user/imgs/shop/thumbnail-3.jpg') }}" />
+                                                    </a>
                                             </div>
                                             <div class="shopping-cart-title">
                                                 <h4><a href="#">Daisy Casual Bag</a></h4>
@@ -102,8 +127,9 @@
                                         </li>
                                         <li>
                                             <div class="shopping-cart-img">
-                                                <a href="#"><img alt="ShopX"
-                                                        src="assets/imgs/shop/thumbnail-2.jpg" /></a>
+                                                <a href="#">
+                                                    <img alt="Bmazon" src="{{ asset('assets/user/imgs/shop/thumbnail-2.jpg') }}" />
+                                                </a>
                                             </div>
                                             <div class="shopping-cart-title">
                                                 <h4><a href="#">Corduroy Shirts</a></h4>
@@ -125,12 +151,17 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- END CART -->
+
+                            <!-- BEGIN ACCOUNT -->
                             <div class="header-action-icon-2">
-                                <a href="#">
-                                    <img class="svgInject" alt="ShopX"
-                                        src="assets/imgs/theme/icons/icon-user.svg" />
+                                <a href="{{ route('login') }}">
+                                    <img class="svgInject" alt="Bmazon"
+                                        src="{{ asset('assets/user/imgs/theme/icons/icon-user.svg') }}" />
                                 </a>
-                                <a href="#"><span class="lable ml-0">Account</span></a>
+
+                                <a href="{{ route('login') }}"><span class="lable ml-0">Account</span></a>
+
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                     <ul>
                                         <li>
@@ -160,12 +191,17 @@
                                     </ul>
                                 </div>
                             </div>
+                            <!-- END ACCOUNT -->
                         </div>
                     </div>
+                    <!-- END HEADER ACTIONS -->
                 </div>
             </div>
         </div>
     </div>
+    <!-- END HEADER MIDDLE -->
+
+    <!-- BEGIN HEADER BOTTOM -->
     <div class="header-bottom header-bottom-bg-color sticky-bar">
         <div class="container">
             <div class="header-wrap header-space-between position-relative">
@@ -426,20 +462,20 @@
                     <div class="header-action-2">
                         <div class="header-action-icon-2">
                             <a href="shop-wishlist.html">
-                                <img alt="ShopX" src="assets/imgs/theme/icons/icon-heart.svg" />
+                                <img alt="Bmazon" src="assets/imgs/theme/icons/icon-heart.svg" />
                                 <span class="pro-count white">4</span>
                             </a>
                         </div>
                         <div class="header-action-icon-2">
                             <a class="mini-cart-icon" href="#">
-                                <img alt="ShopX" src="assets/imgs/theme/icons/icon-cart.svg" />
+                                <img alt="Bmazon" src="assets/imgs/theme/icons/icon-cart.svg" />
                                 <span class="pro-count white">2</span>
                             </a>
                             <div class="cart-dropdown-wrap cart-dropdown-hm2">
                                 <ul>
                                     <li>
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt="ShopX"
+                                            <a href="#"><img alt="Bmazon"
                                                     src="assets/imgs/shop/thumbnail-3.jpg" /></a>
                                         </div>
                                         <div class="shopping-cart-title">
@@ -452,7 +488,7 @@
                                     </li>
                                     <li>
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt="ShopX"
+                                            <a href="#"><img alt="Bmazon"
                                                     src="assets/imgs/shop/thumbnail-4.jpg" /></a>
                                         </div>
                                         <div class="shopping-cart-title">
@@ -480,8 +516,9 @@
             </div>
         </div>
     </div>
+    <!-- BEGIN HEADER BOTTOM -->
 </header>
-<!-- END HEADER -->
+<!-- END DESKTOP HEADER -->
 
 <!-- BEGIN MOBILE HEADER -->
 <div class="mobile-header-active mobile-header-wrapper-style">
@@ -665,7 +702,7 @@
                         alt="" /></a>
                 <a href="#"><img src="assets/imgs/theme/icons/icon-youtube-white.svg" alt="" /></a>
             </div>
-            <div class="site-copyright">Copyright 2025 © ShopX. All rights reserved. Powered by AliThemes.</div>
+            <div class="site-copyright">Copyright 2025 © Bmazon. All rights reserved. Powered by AliThemes.</div>
         </div>
     </div>
 </div>

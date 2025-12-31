@@ -7,7 +7,7 @@
                         <div class="position-relative newsletter-inner">
                             <div class=" newsletter-content">
                                 <h2 class="mb-20">Stay Stylish at Home Shop <br> the Latest Looks Online</h2>
-                                <p class="mb-45">Start You'r Daily Shopping with <span class="text-brand">ShopX</span>
+                                <p class="mb-45">Start You'r Daily Shopping with <span class="text-brand">Bmazon</span>
                                 </p>
                                 <form class="form-subcriber d-flex">
                                     <input type="email" placeholder="Your emaill address" />
@@ -92,7 +92,7 @@
                             <li><img src="assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call
                                     Us:</strong><span>+9625415 546666464</span></li>
                             <li><img src="assets/imgs/theme/icons/icon-email-2.svg"
-                                    alt="" /><strong>Email:</strong><span>sale@shopx.com</span></li>
+                                    alt="" /><strong>Email:</strong><span>kemini-dev@gmail.com</span></li>
                             <li><img src="assets/imgs/theme/icons/icon-clock.svg"
                                     alt="" /><strong>Hours:</strong><span>10:00 - 18:00, Mon - Sat</span>
                             </li>
@@ -163,7 +163,7 @@
                 <div class="footer-bottom"></div>
             </div>
             <div class="col-xl-4 col-lg-6 col-md-6">
-                <p class="font-sm mb-0">&copy; 2025, <strong class="text-brand">ShopX</strong> - HTML Ecommerce
+                <p class="font-sm mb-0">&copy; 2025, <strong class="text-brand">Bmazon</strong> - HTML Ecommerce
                     Template <br />All rights reserved</p>
             </div>
             <div class="col-xl-4 col-lg-6 text-center d-none d-xl-block">

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Laravel Ecommerce</title>
+    <title>Bmazon</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="font-xs">
                                     <ul>
-                                        <li class="mb-5">Vendor: <span class="text-brand">ShopX</span></li>
+                                        <li class="mb-5">Vendor: <span class="text-brand">Bmazon</span></li>
                                         <li class="mb-5">MFG:<span class="text-brand"> Jun 4.2025</span></li>
                                     </ul>
                                 </div>

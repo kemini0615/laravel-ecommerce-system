@@ -45,7 +45,7 @@
                         </div>
                         <div>
                             <span class="font-small text-muted">By <a
-                                    href="vendor-details-1.html">ShopX</a></span>
+                                    href="vendor-details-1.html">Bmazon</a></span>
                         </div>
                         <div class="product-card-bottom">
                             <div class="product-price">
@@ -200,7 +200,7 @@
                         </div>
                         <div>
                             <span class="font-small text-muted">By <a
-                                    href="vendor-details-1.html">ShopX</a></span>
+                                    href="vendor-details-1.html">Bmazon</a></span>
                         </div>
                         <div class="product-card-bottom">
                             <div class="product-price">
@@ -254,7 +254,7 @@
                         </div>
                         <div>
                             <span class="font-small text-muted">By <a
-                                    href="vendor-details-1.html">ShopX</a></span>
+                                    href="vendor-details-1.html">Bmazon</a></span>
                         </div>
                         <div class="product-card-bottom">
                             <div class="product-price">
@@ -304,7 +304,7 @@
                         </div>
                         <div>
                             <span class="font-small text-muted">By <a
-                                    href="vendor-details-1.html">ShopX</a></span>
+                                    href="vendor-details-1.html">Bmazon</a></span>
                         </div>
                         <div class="product-card-bottom">
                             <div class="product-price">
