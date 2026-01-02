@@ -24,12 +24,14 @@ class ProfileController extends Controller
             'profile_image' => ['nullable', 'image', 'max:5242']
         ]);
 
-        $filePath = $this->uploadFile($request->file('profile_image'));
-
         $currentUser = auth('web')->user();
+
         $currentUser->name = $request->name;
         $currentUser->email = $request->email;
+
+        $filePath = $this->uploadFile($request->file('profile_image'), $currentUser->profile_image);
         $currentUser->profile_image = $filePath;
+
         $currentUser->save();
 
         NotificationService::updated();
