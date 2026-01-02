@@ -32,15 +32,17 @@
                                         <a class="nav-link" href="#address"><i class="fi-rs-marker mr-10"></i>My Address</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#account-detail"><i class="fi-rs-user mr-10"></i>Account
-                                            details</a>
+                                        <a class="nav-link" href="{{ route('profile') }}"><i class="fi-rs-user mr-10"></i>Profile</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#wishlist-tab"><i class="fi-rs-heart mr-10"></i>Wishlist</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#"><i class="fi-rs-sign-out mr-10"></i>Logout</a>
+                                        <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fi-rs-sign-out mr-10"></i>Logout</a>
                                     </li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                    </form>
                                 </ul>
                             </div>
                         </div>
