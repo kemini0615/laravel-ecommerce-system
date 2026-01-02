@@ -11,11 +11,13 @@
                 <p>Edit your information</p>
 
                 <!-- BEGIN FORM -->
-                <form method="POST" action="{{ route('profile.update.information') }}">
+                <form method="POST" action="{{ route('profile.update.information') }}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
                     <div class="row mt-30">
+                        <x-input-image name="profile_image" :image="auth()->user()->profile_image" />
+
                         <div class="form-group col-md-12">
                             <label>Name</label>
                             <input required class="form-control" name="name" type="text"

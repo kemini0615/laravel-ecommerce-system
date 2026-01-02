@@ -4,10 +4,13 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Services\NotificationService;
+use App\Traits\FileUploadTrait;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+    use FileUploadTrait;
+
     public function index()
     {
         return view('user.dashboard.profile');
@@ -18,11 +21,15 @@ class ProfileController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:50'],
             'email' => ['required', 'email', 'unique:users,email,' . auth('web')->user()->id], // unique:table,column,ignore_id
+            'profile_image' => ['nullable', 'image', 'max:5242']
         ]);
+
+        $filePath = $this->uploadFile($request->file('profile_image'));
 
         $currentUser = auth('web')->user();
         $currentUser->name = $request->name;
         $currentUser->email = $request->email;
+        $currentUser->profile_image = $filePath;
         $currentUser->save();
 
         NotificationService::updated();

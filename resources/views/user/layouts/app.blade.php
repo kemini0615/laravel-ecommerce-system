@@ -20,6 +20,10 @@
     <!-- BEGIN CSS -->
     <link rel="stylesheet" href="{{ asset('assets/user/css/main.css') }}" />
     <!-- END CSS -->
+
+    <!-- BEGIN JS -->
+    @vite('resources/js/image-preview.js')
+    <!-- END JS -->
 </head>
 
 <body>
