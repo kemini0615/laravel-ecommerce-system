@@ -23,6 +23,6 @@ class Breadcrumbs extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.user.breadcrumbs', ['items' => $this->items]);
+        return view('components.user.breadcrumbs');
     }
 }

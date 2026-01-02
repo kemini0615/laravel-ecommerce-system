@@ -1,3 +1,5 @@
+@props(['name', 'image'])
+
 <div class="page-header breadcrumb-wrap">
     <div class="container">
         <div class="breadcrumb">
