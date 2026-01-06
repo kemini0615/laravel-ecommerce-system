@@ -11,6 +11,10 @@
     <link href="{{ asset('assets/admin/css/tabler.css') }}" rel="stylesheet" />
     <!-- END TABLER CSS -->
 
+    <!-- BEGIN JS -->
+    @vite('resources/js/image-preview.js')
+    <!-- END JS -->
+
     <!-- BEGIN FONT -->
     <style>
         @import url("https://rsms.me/inter/inter.css");

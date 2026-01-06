@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Services\NotificationService;
@@ -13,18 +13,18 @@ class ProfileController extends Controller
 
     public function index()
     {
-        return view('user.dashboard.profile');
+        return view('admin.profile.index');
     }
 
     public function updateInformation(Request $request)
     {
         $request->validate([
             'name' => ['required', 'string', 'max:50'],
-            'email' => ['required', 'email', 'unique:users,email,' . auth('web')->user()->id], // unique:table,column,ignore_id
-            'profile_image' => ['nullable', 'image', 'max:5242']
+            'email' => ['required', 'email', 'unique:users,email,' . auth('admin')->user()->id], // unique:table,column,ignore_id
+            'profile_image' => ['nullable', 'image', 'max:5242'],
         ]);
 
-        $currentUser = auth('web')->user();
+        $currentUser = auth('admin')->user();
 
         $currentUser->name = $request->name;
         $currentUser->email = $request->email;
@@ -48,7 +48,7 @@ class ProfileController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-        $currentUser = auth('web')->user();
+        $currentUser = auth('admin')->user();
         $currentUser->password = $request->password;
         $currentUser->save();
 

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\NewPasswordController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
+use App\Http\Controllers\Admin\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 // ADMIN DASHBOARD
@@ -38,4 +39,13 @@ Route::middleware('auth:admin')
     ->group(function () {
         Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
             ->name('logout');
+
+        Route::get('/profile', [ProfileController::class, 'index'])
+            ->name('profile');
+
+        Route::put('/profile/information', [ProfileController::class, 'updateInformation'])
+            ->name('profile.update.information');
+
+        Route::put('/profile/password', [ProfileController::class, 'updatePassword'])
+            ->name('profile.update.password');
     });
