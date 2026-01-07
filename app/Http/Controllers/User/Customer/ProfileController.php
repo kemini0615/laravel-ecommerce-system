@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\User\Customer;
 
 use App\Http\Controllers\Controller;
 use App\Services\NotificationService;
@@ -13,7 +13,7 @@ class ProfileController extends Controller
 
     public function index()
     {
-        return view('user.dashboard.profile');
+        return view('user.customer.dashboard.profile');
     }
 
     public function updateInformation(Request $request)

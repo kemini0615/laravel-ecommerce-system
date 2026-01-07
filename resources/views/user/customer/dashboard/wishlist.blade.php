@@ -1,4 +1,4 @@
-@extends('user.dashboard.layouts.app')
+@extends('user.customer.dashboard.layouts.app')
 
 @section('dashboard.content')
     <div class="tab-pane fade" id="wishlist-tab" role="tabpanel" aria-labelledby="wishlist-detail-tab">

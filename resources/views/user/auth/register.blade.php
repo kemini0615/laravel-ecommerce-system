@@ -56,22 +56,23 @@
                                         </div>
                                         <!-- END CONFIRM PASSWORD -->
 
+                                        <!-- BEGIN SELECT USER TYPE  -->
                                         <div class="payment_option mb-30">
                                             <div class="custom-radio">
-                                                <input class="form-check-input" required type="radio"
-                                                    name="payment_option" id="exampleRadios3" checked />
-                                                <label class="form-check-label" for="exampleRadios3"
-                                                    data-bs-toggle="collapse" data-target="#bankTranfer"
-                                                    aria-controls="bankTranfer">Customer</label>
+                                                <input class="form-check-input" required type="radio" name="user_type"
+                                                    id="customer" value="customer" checked />
+                                                <label class="form-check-label" for="user_type"
+                                                    data-bs-toggle="collapse">Customer</label>
                                             </div>
                                             <div class="custom-radio">
-                                                <input class="form-check-input" required type="radio"
-                                                    name="payment_option" id="exampleRadios4" />
-                                                <label class="form-check-label" for="exampleRadios4"
-                                                    data-bs-toggle="collapse" data-target="#checkPayment"
-                                                    aria-controls="checkPayment">Vendor</label>
+                                                <input class="form-check-input" required type="radio" name="user_type"
+                                                    id="vendor" value="vendor" />
+                                                <label class="form-check-label" for="vendor"
+                                                    data-bs-toggle="collapse">Vendor</label>
                                             </div>
                                         </div>
+                                        <!-- END SELECT USER TYPE -->
+
                                         <div class="form-group mb-0">
                                             <button type="submit"
                                                 class="btn btn-fill-out btn-block hover-up font-weight-bold"

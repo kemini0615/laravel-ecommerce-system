@@ -1,4 +1,4 @@
-@extends('user.dashboard.layouts.app')
+@extends('user.customer.dashboard.layouts.app')
 
 @section('dashboard.content')
     <div id="profile" role="tabpanel" aria-labelledby="profile-tab">
