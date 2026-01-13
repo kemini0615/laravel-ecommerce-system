@@ -7,7 +7,8 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/js/image-preview.js'
+                'resources/js/image-preview.js',
+                'resources/js/date.js'
             ],
             refresh: true,
         }),

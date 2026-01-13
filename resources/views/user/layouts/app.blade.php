@@ -17,12 +17,18 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- BEGIN FLATPICKR CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- END FLATPICKR CDN -->
+
     <!-- BEGIN CSS -->
     <link rel="stylesheet" href="{{ asset('assets/user/css/main.css') }}" />
     <!-- END CSS -->
 
     <!-- BEGIN JS -->
     @vite('resources/js/image-preview.js')
+    @vite('resources/js/date.js')
     <!-- END JS -->
 </head>
 

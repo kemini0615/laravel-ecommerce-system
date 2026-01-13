@@ -18,6 +18,17 @@ composer require laravel/breeze --dev
 php artisan breeze:install
 ```
 
+Laravel IDE Helper 설치
+```bash
+composer require --dev barryvdh/laravel-ide-helper
+```
+
+Laravel IDE Helper 사용
+```bash
+php artisan ide-helper:generate
+```
+
+
 ## DB
 DB 마이그레이션
 

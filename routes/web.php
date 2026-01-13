@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\User\Customer\ProfileController as CustomerProfileController;
 use App\Http\Controllers\User\Customer\DashboardController as CustomerDashboardController;
+use App\Http\Controllers\User\KycVerificationController;
 use App\Http\Controllers\User\Vendor\DashboardController as VendorDashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', [CustomerProfileController::class, 'index'])->name('profile');
     Route::put('/profile/information', [CustomerProfileController::class, 'updateInformation'])->name('profile.update.information');
     Route::put('/profile/password', [CustomerProfileController::class, 'updatePassword'])->name('profile.update.password');
+
+    // CUSTOMER KYC VERIFICATION
+    Route::get('/kyc-verification', [KycVerificationController::class, 'index'])->name('kyc.verification');
+    Route::post('/kyc-verification', [KycVerificationController::class, 'store'])->name('kyc.verification.store');
 });
 
 Route::middleware(['auth', 'verified'])
