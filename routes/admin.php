@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\NewPasswordController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\KycVerificationController;
 use Illuminate\Support\Facades\Route;
 
 // ADMIN DASHBOARD
@@ -40,12 +41,13 @@ Route::middleware('auth:admin')
         Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
             ->name('logout');
 
-        Route::get('/profile', [ProfileController::class, 'index'])
-            ->name('profile');
+        // ADMIN PROFILE
+        Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+        Route::put('/profile/information', [ProfileController::class, 'updateInformation'])->name('profile.update.information');
+        Route::put('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.update.password');
 
-        Route::put('/profile/information', [ProfileController::class, 'updateInformation'])
-            ->name('profile.update.information');
-
-        Route::put('/profile/password', [ProfileController::class, 'updatePassword'])
-            ->name('profile.update.password');
+        // ADMIN KYC VERIFICATION
+        Route::get('/kyc-verification', [KycVerificationController::class, 'index'])->name('kyc.verification');
+        Route::get('/kyc-verification/{request}', [KycVerificationController::class, 'show'])->name('kyc.verification.show');
+        Route::get('kyc-verification/{request}/download', [KycVerificationController::class, 'download'])->name('kyc.verification.download');
     });
