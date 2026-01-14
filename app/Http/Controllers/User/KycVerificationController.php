@@ -15,6 +15,10 @@ class KycVerificationController extends Controller
 
     public function index()
     {
+        if (Auth::guard('web')->user()->kyc_verification?->status === 'pending' || Auth::guard('web')->user()->kyc_verification?->status === 'approved') {
+            return redirect()->route('vendor.dashboard');
+        }
+
         return view('user.customer.verification.index');
     }
 
