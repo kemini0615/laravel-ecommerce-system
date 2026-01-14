@@ -33,22 +33,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($requests as $request)
+                            @foreach ($kyc_requests as $kyc_request)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $request->name }}</td>
-                                    <td class="text-secondary">{{ $request->user->email }}</td>
-                                    <td class="text-secondary">{{ $request->date_of_birth }}</td>
-                                    <td class="text-secondary">{{ $request->gender }}</td>
-                                    @if ($request->status === 'pending')
+                                    <td>{{ $kyc_request->name }}</td>
+                                    <td class="text-secondary">{{ $kyc_request->user->email }}</td>
+                                    <td class="text-secondary">{{ $kyc_request->date_of_birth }}</td>
+                                    <td class="text-secondary">{{ $kyc_request->gender }}</td>
+                                    @if ($kyc_request->status === 'pending')
                                         <td class="text-secondary"><span class="badge bg-warning-lt">Pending</span></td>
-                                    @elseif ($request->status === 'approved')
+                                    @elseif ($kyc_request->status === 'approved')
                                         <td class="text-secondary"><span class="badge bg-success-lt">Approved</span></td>
-                                    @elseif ($request->status === 'rejected')
+                                    @elseif ($kyc_request->status === 'rejected')
                                         <td class="text-secondary"><span class="badge bg-danger-lt">Rejected</span></td>
                                     @endif
                                     <td>
-                                        <a href="{{ route('admin.kyc.verification.show', $request->id) }}">View</a>
+                                        <a href="{{ route('admin.kyc.verification.show', $kyc_request->id) }}">View</a>
                                     </td>
                                 </tr>
                             @endforeach

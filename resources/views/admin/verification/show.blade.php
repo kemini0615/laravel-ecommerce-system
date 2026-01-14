@@ -4,7 +4,7 @@
     <div class="container-xl mt-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">All Requests</h3>
+                <h3 class="card-title">KYC Request Details</h3>
                 <div class="card-actions">
                     <a href="#" class="btn btn-primary btn-3">
                         <!-- Download SVG icon from http://tabler.io/icons/icon/plus -->
@@ -24,46 +24,49 @@
                         <tbody>
                             <tr>
                                 <td>Name</td>
-                                <td class="text-secondary">{{ $request->name }}</td>
+                                <td class="text-secondary">{{ $kyc_request->name }}</td>
                             </tr>
                             <tr>
                                 <td>Date of birth</td>
-                                <td class="text-secondary">{{ $request->date_of_birth }}</td>
+                                <td class="text-secondary">{{ $kyc_request->date_of_birth }}</td>
                             </tr>
                             <tr>
                                 <td>Gender</td>
-                                <td class="text-secondary">{{ $request->gender }}</td>
+                                <td class="text-secondary">{{ $kyc_request->gender }}</td>
                             </tr>
                             <tr>
                                 <td>Address</td>
-                                <td class="text-secondary">{{ $request->address }}</td>
+                                <td class="text-secondary">{{ $kyc_request->address }}</td>
                             </tr>
 
                             <tr>
                                 <td>Document Type</td>
-                                <td class="text-secondary">{{ $request->document_type }}</td>
+                                <td class="text-secondary">{{ $kyc_request->document_type }}</td>
                             </tr>
                             <tr>
                                 <td>Document</td>
-                                <td><a href="{{ route('admin.kyc.verification.download', $request->id) }}"
+                                <td><a href="{{ route('admin.kyc.verification.download', $kyc_request->id) }}"
                                         class="btn btn-6 btn-outline-dark">Download</a></td>
                             </tr>
                             <tr>
                                 <td>Status</td>
-                                @if ($request->status === 'pending')
+                                @if ($kyc_request->status === 'pending')
                                     <td class="text-secondary"><span class="badge bg-warning-lt">Pending</span></td>
-                                @elseif ($request->status === 'approved')
+                                @elseif ($kyc_request->status === 'approved')
                                     <td class="text-secondary"><span class="badge bg-success-lt">Approved</span></td>
-                                @elseif ($request->status === 'rejected')
+                                @elseif ($kyc_request->status === 'rejected')
                                     <td class="text-secondary"><span class="badge bg-danger-lt">Rejected</span></td>
                                 @endif
                             </tr>
                             <tr>
                                 <td>Change Status</td>
                                 <td>
-                                    <form action="">
+                                    <form action="{{ route('admin.kyc.verification.update', $kyc_request->id) }}" method="POST">
+                                        @csrf
+                                        @method('PUT')
+
                                         <div class="input-group">
-                                            <select name="new_status" class="form-control">
+                                            <select name="status" class="form-control">
                                                 <option value="pending">Pending</option>
                                                 <option value="approved">Approved</option>
                                                 <option value="rejected">Rejected</option>
