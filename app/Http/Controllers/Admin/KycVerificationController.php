@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\KycVerification;
+use App\Services\MailService;
 use App\Services\NotificationService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -28,6 +29,18 @@ class KycVerificationController extends Controller
             'status' => $request->status
         ]);
 
+        if ($kyc_request->status === 'approved') {
+            $body = 'Congratulations! Your request has been approved successfully.';
+        } else if ($kyc_request->status === 'rejected') {
+            $body = 'Sorry. Your request has been rejected.';
+        }
+
+        MailService::send(
+            to: $kyc_request->user->email,
+            subject: 'KYC Verification Request Updated',
+            body: $body
+        );
+
         NotificationService::updated();
 
         return redirect()->route('admin.kyc.verification');
@@ -36,5 +49,23 @@ class KycVerificationController extends Controller
     public function download(KycVerification $kyc_request)
     {
         return Storage::disk('local')->download($kyc_request->document);
+    }
+
+    public function pending()
+    {
+        $kyc_requests = KycVerification::where('status', 'pending')->paginate(10);
+        return view('admin.verification.pending', ['kyc_requests' => $kyc_requests]);
+    }
+
+    public function approved()
+    {
+        $kyc_requests = KycVerification::where('status', 'approved')->paginate(10);
+        return view('admin.verification.approved', ['kyc_requests' => $kyc_requests]);
+    }
+
+    public function rejected()
+    {
+        $kyc_requests = KycVerification::where('status', 'rejected')->paginate(10);
+        return view('admin.verification.rejected', ['kyc_requests' => $kyc_requests]);
     }
 }

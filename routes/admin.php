@@ -48,6 +48,9 @@ Route::middleware('auth:admin')
 
         // ADMIN KYC VERIFICATION
         Route::get('/kyc-verification', [KycVerificationController::class, 'index'])->name('kyc.verification');
+        Route::get('/kyc-versification/pending', [KycVerificationController::class, 'pending'])->name('kyc.verification.pending');
+        Route::get('/kyc-versification/approved', [KycVerificationController::class, 'approved'])->name('kyc.verification.approved');
+        Route::get('/kyc-versification/rejected', [KycVerificationController::class, 'rejected'])->name('kyc.verification.rejected');
         Route::get('/kyc-verification/{kyc_request}', [KycVerificationController::class, 'show'])->name('kyc.verification.show');
         Route::get('/kyc-verification/{kyc_request}/download', [KycVerificationController::class, 'download'])->name('kyc.verification.download');
         Route::put('/kyc-verification/{kyc_request}/update', [KycVerificationController::class, 'update'])->name('kyc.verification.update');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\KycVerification;
+use App\Services\MailService;
 use App\Services\NotificationService;
 use App\Traits\FileUploadTrait;
 use Illuminate\Http\Request;
@@ -48,6 +49,12 @@ class KycVerificationController extends Controller
         $kyc->document_type = $request->document_type;
         $kyc->document = $this->uploadPrivateFile($request->document);
         $kyc->save();
+
+        MailService::send(
+            to: $kyc->user->email,
+            subject: 'KYC Verification Request Submitted',
+            body: 'Your KYC verification request is pending. Please wait for the admin approve your verification.'
+        );
 
         NotificationService::created('Submitted Successfully.');
 

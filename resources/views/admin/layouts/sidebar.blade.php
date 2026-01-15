@@ -48,6 +48,15 @@
                                 <a class="dropdown-item" href="{{ route('admin.kyc.verification') }}">
                                     All Requests
                                 </a>
+                                <a class="dropdown-item" href="{{ route('admin.kyc.verification.pending') }}">
+                                    Pending Requests
+                                </a>
+                                <a class="dropdown-item" href="{{ route('admin.kyc.verification.approved') }}">
+                                    Approved Requests
+                                </a>
+                                <a class="dropdown-item" href="{{ route('admin.kyc.verification.rejected') }}">
+                                    Rejected Requests
+                                </a>
                             </div>
                         </div>
                     </div>

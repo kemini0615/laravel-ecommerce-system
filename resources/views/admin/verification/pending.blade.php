@@ -4,7 +4,7 @@
     <div class="container-xl mt-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">All Requests</h3>
+                <h3 class="card-title">Pending Requests</h3>
             </div>
             <div class="card-body p-0">
                 <div class="table-responsive">
@@ -21,25 +21,23 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($kyc_requests as $kyc_request)
+                            @forelse ($kyc_requests as $kyc_request)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $kyc_request->name }}</td>
                                     <td class="text-secondary">{{ $kyc_request->user->email }}</td>
                                     <td class="text-secondary">{{ $kyc_request->date_of_birth }}</td>
                                     <td class="text-secondary">{{ $kyc_request->gender }}</td>
-                                    @if ($kyc_request->status === 'pending')
-                                        <td class="text-secondary"><span class="badge bg-warning-lt">Pending</span></td>
-                                    @elseif ($kyc_request->status === 'approved')
-                                        <td class="text-secondary"><span class="badge bg-success-lt">Approved</span></td>
-                                    @elseif ($kyc_request->status === 'rejected')
-                                        <td class="text-secondary"><span class="badge bg-danger-lt">Rejected</span></td>
-                                    @endif
+                                    <td class="text-secondary"><span class="badge bg-warning-lt">Pending</span></td>
                                     <td>
                                         <a href="{{ route('admin.kyc.verification.show', $kyc_request->id) }}">View</a>
                                     </td>
                                 </tr>
-                            @endforeach
+                            @empty
+                                <tr>
+                                    <td colspan="7" class="text-center">No pending requests</td>
+                                </tr>
+                            @endforelse
                         </tbody>
                     </table>
                 </div>
