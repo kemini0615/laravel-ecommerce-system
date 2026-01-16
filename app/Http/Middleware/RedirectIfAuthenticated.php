@@ -38,7 +38,7 @@ class RedirectIfAuthenticated
     /**
      * Get the path the user should be redirected to when they are authenticated.
      */
-    protected function redirectTo(Request $request, ?string $guard): ?string
+    protected function redirectTo(Request $request, ?string $guard = 'web'): ?string
     {
         return static::$redirectToCallback
             ? call_user_func(static::$redirectToCallback, $request)

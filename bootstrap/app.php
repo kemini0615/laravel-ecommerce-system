@@ -18,6 +18,8 @@ return Application::configure(basePath: dirname(__DIR__))
             // 미들웨어 별칭 덮어쓰기
             'auth' => App\Http\Middleware\Authenticate::class,
             'guest' => App\Http\Middleware\RedirectIfAuthenticated::class,
+            'role' => App\Http\Middleware\CheckUserRole::class,
+            'kyc_verified' => App\Http\Middleware\CheckKycVerificationStatus::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

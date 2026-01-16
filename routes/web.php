@@ -6,11 +6,12 @@ use App\Http\Controllers\User\KycVerificationController;
 use App\Http\Controllers\User\Vendor\DashboardController as VendorDashboardController;
 use Illuminate\Support\Facades\Route;
 
-// HOME
+// HOME ROUTE
 Route::get('/', function () {
     return view('user.home.index');
 });
 
+// CUSTOMER ROUTES
 Route::middleware(['auth', 'verified'])->group(function () {
     // CUSTOMER DASHBOARD
     Route::get('/dashboard', [CustomerDashboardController::class, 'index'])->name('dashboard');
@@ -25,7 +26,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/kyc-verification', [KycVerificationController::class, 'store'])->name('kyc.verification.store');
 });
 
-Route::middleware(['auth', 'verified'])
+// VENDOR ROUTES
+Route::middleware(['auth', 'verified', 'role:vendor'])
     ->prefix('vendor')
     ->name('vendor.')
     ->group(function () {
