@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('user_type', ['customer', 'vendor'])->default('customer');
-            $table->string('profile_image')->default('uploads/default-avatar.jpg')->nullable();
+            $table->string('profile_image')->default('/defaults/avatar.png')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
