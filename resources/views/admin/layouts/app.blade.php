@@ -13,6 +13,7 @@
 
     <!-- BEGIN JS -->
     @vite('resources/js/image-preview.js')
+    @vite('resources/js/tinymce-init.js')
     <!-- END JS -->
 
     <!-- BEGIN FONT -->

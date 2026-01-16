@@ -4,6 +4,7 @@ use App\Http\Controllers\User\Customer\ProfileController as CustomerProfileContr
 use App\Http\Controllers\User\Customer\DashboardController as CustomerDashboardController;
 use App\Http\Controllers\User\KycVerificationController;
 use App\Http\Controllers\User\Vendor\DashboardController as VendorDashboardController;
+use App\Http\Controllers\User\Vendor\StoreController;
 use Illuminate\Support\Facades\Route;
 
 // HOME ROUTE
@@ -33,6 +34,9 @@ Route::middleware(['auth', 'verified', 'role:vendor'])
     ->group(function () {
         // VENDOR DASHBOARD
         Route::get('/dashboard', [VendorDashboardController::class, 'index'])->name('dashboard');
+
+        // VENDOR STORE
+        Route::resource('stores', StoreController::class);
     });
 
 require __DIR__ . '/auth.php';

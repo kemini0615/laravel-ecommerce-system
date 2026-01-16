@@ -8,7 +8,8 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
                 'resources/js/image-preview.js',
-                'resources/js/date.js'
+                'resources/js/date.js',
+                'resources/js/tinymce-init.js'
             ],
             refresh: true,
         }),

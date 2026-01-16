@@ -4,3 +4,4 @@
 - tabler
 - mailtrap
 - php-flasher
+- tinymce
