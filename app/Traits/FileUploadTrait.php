@@ -15,7 +15,9 @@ trait FileUploadTrait
         }
 
         $ignores = [
-            'uploads/default-avatar.jpg',
+            '/defaults/avatar.png',
+            '/defaults/logo.png',
+            '/defaults/banner.png',
         ];
 
         if (!is_null($oldPath) && File::exists(public_path($oldPath)) && !in_array($oldPath, $ignores)) {

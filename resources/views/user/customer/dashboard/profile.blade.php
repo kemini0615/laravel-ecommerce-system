@@ -16,7 +16,7 @@
                     @method('PUT')
 
                     <div class="row mt-30">
-                        <x-input-image name="profile_image" :image="auth()->user()->profile_image" />
+                        <x-input-image name="profile_image" :image="auth()->user()->profile_image" previewId="profile-preview" inputId="profile-input" />
 
                         <div class="form-group col-md-12">
                             <label>Name</label>

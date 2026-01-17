@@ -12,6 +12,7 @@
     <!-- END TABLER CSS -->
 
     <!-- BEGIN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js" referrerpolicy="origin"></script>
     @vite('resources/js/image-preview.js')
     @vite('resources/js/tinymce-init.js')
     <!-- END JS -->

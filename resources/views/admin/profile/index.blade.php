@@ -18,7 +18,7 @@
                         <!-- BEGIN PROFILE IMAGE -->
                         <div class="col-md-12">
                             <div class="mb-3">
-                                <x-input-image name="profile_image" :image="auth('admin')->user()->profile_image" />
+                                <x-input-image name="profile_image" :image="auth('admin')->user()->profile_image" previewId="profile-preview" inputId="profile-input" />
                             </div>
                         </div>
                         <!-- END PROFILE IMAGE -->

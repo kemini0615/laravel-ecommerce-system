@@ -10,14 +10,18 @@ class InputImage extends Component
 {
     public string $name;
     public ?string $image;
+    public string $previewId;
+    public string $inputId;
 
     /**
      * Create a new component instance.
      */
-    public function __construct(string $name, ?string $image = null)
+    public function __construct(string $name, ?string $image = null, string $previewId, string $inputId)
     {
         $this->name = $name;
         $this->image = $image;
+        $this->previewId = $previewId;
+        $this->inputId = $inputId;
     }
 
     /**
